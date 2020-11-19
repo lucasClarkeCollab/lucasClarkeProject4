@@ -6,10 +6,27 @@
     <title></title>
     <!-- Internal Script -->
     <script src="./scripts/script.js" type="text/javascript"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css">
     <!-- jQuery -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <!-- External Fonts / Poppins and Roboto -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- List of Countries Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+    <!-- Select JS -->
+    
 </head>
 <body>
-    
+    <main>
+        <section id="home">
+            <div class="wrapper">
+                <div class="whatCity">
+                    <h1>What's the weather like in <label for="city" class="srOnly">your current city</label> <input type="text" name="city" id="city" class="name" placeholder="city" required></input>, <select name="country"><option>country</option>></select>?</h1>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
