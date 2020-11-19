@@ -1,0 +1,39 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Roboto, "sans serif";
+}
+
+input {
+    background: transparent;
+    border: 0;
+}
+
+input[type="text"]{
+    width: 150px;
+    border-bottom: 1px solid $text;
+    padding-bottom: 5px;
+    text-shadow: 1px 1px 0px #FFF;
+}
+
+input::placeholder {
+    text-align: center;
+    color: $text;
+    opacity: 1;
+}
+
+select {
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.whatCity {
+        h1 {
+        font-weight: normal;
+        font-size: 3rem;
+        text-shadow: 1px 1px 0px #FFF;
+    }
+}

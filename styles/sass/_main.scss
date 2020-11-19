@@ -1,4 +1,19 @@
-//Title and User Form
+//Title and User Form (Landing)
+
+#home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url('../assets/PartiallyCloud.png');
+    background-position: center;
+    background-size: cover;
+}
+
+//Title and User Form Slide-out (Hamburger)
+
+// // Title and User Form will fade out to Current Weather Results
 
 //Current Weather Results
 
