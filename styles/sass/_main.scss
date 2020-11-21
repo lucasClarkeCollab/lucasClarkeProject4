@@ -19,5 +19,24 @@
 // // Title and User Form will fade out to Current Weather Results
 
 //Current Weather Results
+.weatherResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        p:first-of-type {
+        text-transform: capitalize;
+        }
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
+        }
+        p {
+            font-size: 2rem;
+        }
+}
+
+.weatherResults img {
+    width: 20%;
+}
 
 //Five-day Forecast Toggle

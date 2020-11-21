@@ -27,9 +27,18 @@ weatherApp.getWeather = () => {
             units: 'Metric'
         }
     }).then(function(results){
-        console.log(results);
+        let currentTemp = Math.ceil(results.main.temp);
+        let minTemp = Math.ceil(results.main.temp_min);
+        let maxTemp = Math.ceil(results.main.temp_max);
         $('.whatCity').hide();
         $('.weatherResults').show();
+        $('.weatherResults').append(`
+        <img src="./assets/Clouds.svg" alt="${results.weather[0].description}">
+        <h2>${results.name}, ${results.sys.country}</h2>
+        <p>${results.weather[0].description}</p>
+        <p><span class="tempTitle">Currently</span> ${currentTemp}°C</p>
+        <p><span class="tempTitle">Min.</span> ${minTemp}°C | <span class="tempTitle">Max.</span> ${maxTemp}°C</p>
+        `)
     })
 }
 
@@ -50,7 +59,6 @@ weatherApp.eventListener = () => {
             weatherApp.getWeather();
             console.log(countryCode);
             return countryCode
-
         }
     })
 

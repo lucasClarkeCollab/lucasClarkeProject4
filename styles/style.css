@@ -340,6 +340,11 @@ button {
   text-shadow: 1px 1px 0px #FFF;
 }
 
+.tempTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
 #home {
   width: 100vw;
   height: 100vh;
@@ -355,4 +360,34 @@ button {
   background-image: url("../assets/PartiallyCloud.png");
   background-position: center;
   background-size: cover;
+}
+
+.weatherResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weatherResults p:first-of-type {
+  text-transform: capitalize;
+}
+
+.weatherResults h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4rem;
+}
+
+.weatherResults p {
+  font-size: 2rem;
+}
+
+.weatherResults img {
+  width: 20%;
 }
