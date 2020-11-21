@@ -375,10 +375,26 @@ section {
 
 .storm {
   background-image: url("../assets/Storm.png");
+  color: white;
 }
 
 .sunny {
   background-image: url("../assets/Sunny.png");
+}
+
+.nightCloudy {
+  background-image: url("../assets/NightCloudy.png");
+  color: white;
+}
+
+.nightStorm {
+  background-image: url("../assets/NightStorm.png");
+  color: white;
+}
+
+.nightOvercast {
+  background-image: url(../assets/nightOvercast.png);
+  color: white;
 }
 
 .weatherResults {
