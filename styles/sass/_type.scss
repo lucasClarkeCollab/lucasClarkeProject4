@@ -7,7 +7,6 @@ body {
     line-height:1.6;
 }
 
-
 input[type="text"]{
     width: 150px;
     border-bottom: 1px solid $text;
@@ -32,6 +31,13 @@ select {
     text-shadow: 1px 1px 0px #FFF;
     background-color: transparent;
     width: 250px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 2.7rem;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 0px #FFF;
 }
 
 .whatCity {

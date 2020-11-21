@@ -9,33 +9,41 @@ const weatherApp = {};
 
 weatherApp.init = () => {
     weatherApp.eventListener();
-    // weatherApp.getWeather();
 }
 
+let countryCode = "";
+let city = "";
 
 
-
-weatherApp.getWeather = () => {
-    $.ajax({
-        url: 'http://api.openweathermap.org/data/2.5/weather?',
-        method: 'GET',
-        dataType: 'json',
-        data: {
-            q: countryCode,
-            APPID: '92d78e5b6220af8048ce06de33b61699',
-            units: 'Metric'
-        }
-    }).then(function(results){
-        console.log(results)
-    })
-}
-
-// let countryCode = "";
+// weatherApp.getWeather = () => {
+//     $.ajax({
+//         url: 'http://api.openweathermap.org/data/2.5/weather?',
+//         method: 'GET',
+//         dataType: 'json',
+//         data: {
+//             q: `${city},${countryCode}`
+//             APPID: '92d78e5b6220af8048ce06de33b61699',
+//             units: 'Metric'
+//         }
+//     }).then(function(results){
+//         console.log(results)
+//     })
+// }
 
 weatherApp.eventListener = () => {
     $('.countries').on('click', function(){
         countryCode = $(this).attr('value');
-        return countryCode;
+    })
+    $('form').on('submit', function(e){
+        e.preventDefault();
+        city = $('input').val();
+        if (countryCode === '' || countryCode === 'NA') {
+            alert('Please select a valid country')
+        }
+        else {
+            console.log(countryCode);
+            return countryCode
+        }
     })
 }
 

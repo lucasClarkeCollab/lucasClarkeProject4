@@ -327,6 +327,13 @@ select {
   width: 250px;
 }
 
+button {
+  padding: 10px 20px;
+  font-size: 2.7rem;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 0px #FFF;
+}
+
 .whatCity h1 {
   font-weight: normal;
   font-size: 3rem;
