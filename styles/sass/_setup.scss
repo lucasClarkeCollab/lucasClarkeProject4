@@ -8,28 +8,41 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-* {
-    padding: 0;
-    margin: 0;
-}
+//Makes font size a multiple of 10 by default
 html {
     font-size: 62.5%;
 }
+
+// Adjusting image defaults so they don't break out of containers
 img {
     width: 100%;
     height: auto;
     display: block;
 }
+
+//Wrapper styling 
 .wrapper {
     max-width: 1400px;
     width: 90%;
     margin: 0 auto;
     text-align: center;
 }
+
+// Stripping default styles
+* {
+    padding: 0;
+    margin: 0;
+}
+
 ul {
     list-style: none;
 }
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+input {
+    background: transparent;
+    border: 0;
 }
