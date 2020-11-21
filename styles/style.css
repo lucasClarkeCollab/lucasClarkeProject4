@@ -235,11 +235,6 @@ html {
   overflow: hidden;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -257,6 +252,11 @@ img {
   text-align: center;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -266,54 +266,65 @@ a {
   cursor: pointer;
 }
 
+input {
+  background: transparent;
+  border: 0;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   font-family: Roboto, "sans serif";
-}
-
-input {
-  background: transparent;
-  border: 0;
+  line-height: 1.6;
 }
 
 input[type="text"] {
   width: 150px;
   border-bottom: 1px solid #15130F;
-  padding-bottom: 5px;
+  padding: 10px 0;
   text-shadow: 1px 1px 0px #FFF;
+  text-align: center;
+  font-size: 3rem;
 }
 
 input::-webkit-input-placeholder {
   text-align: center;
   color: #15130F;
   opacity: 1;
+  font-size: 3rem;
 }
 
 input:-ms-input-placeholder {
   text-align: center;
   color: #15130F;
   opacity: 1;
+  font-size: 3rem;
 }
 
 input::-ms-input-placeholder {
   text-align: center;
   color: #15130F;
   opacity: 1;
+  font-size: 3rem;
 }
 
 input::placeholder {
   text-align: center;
   color: #15130F;
   opacity: 1;
+  font-size: 3rem;
 }
 
 select {
   padding: 10px 20px;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 0px #FFF;
+  background-color: transparent;
+  width: 250px;
 }
 
 .whatCity h1 {

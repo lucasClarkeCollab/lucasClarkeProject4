@@ -4,30 +4,34 @@ html {
 
 body {
     font-family: Roboto, "sans serif";
+    line-height:1.6;
 }
 
-input {
-    background: transparent;
-    border: 0;
-}
 
 input[type="text"]{
     width: 150px;
     border-bottom: 1px solid $text;
-    padding-bottom: 5px;
+    padding: 10px 0;
     text-shadow: 1px 1px 0px #FFF;
+    text-align: center;
+    font-size: 3rem;
 }
 
 input::placeholder {
     text-align: center;
     color: $text;
     opacity: 1;
+    font-size:3rem;
 }
 
 select {
     padding: 10px 20px;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 0px #FFF;
+    background-color: transparent;
+    width: 250px;
 }
 
 .whatCity {
