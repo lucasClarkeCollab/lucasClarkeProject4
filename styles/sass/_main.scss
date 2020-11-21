@@ -1,14 +1,33 @@
 //Title and User Form (Landing)
 
-#home {
+section {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image:url('../assets/PartiallyCloud.png');
     background-position: center;
     background-size: cover;
+}
+
+.default {
+background-image:url('../assets/PartiallyCloud.png');
+}
+
+.cloudy {
+    background-image:url('../assets/Cloudy.png');
+}
+
+.overcast {
+    background-image: url('../assets/Overcast.png');
+}
+
+.storm {
+    background-image: url('../assets/Storm.png');
+}
+
+.sunny {
+    background-image: url('../assets/Sunny.png');
 }
 
 
