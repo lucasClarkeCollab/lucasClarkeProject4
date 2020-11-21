@@ -19,7 +19,271 @@
         <section id="home">
             <div class="wrapper">
                 <div class="whatCity">
-                    <form action=""><h1>What's the weather like in <label for="city" class="srOnly">your current city</label> <input type="text" name="city" id="city" class="name" placeholder="city" required></input>, <select class="form-control" value="NA" data-role="country-selector" data-code-mode="alpha2"></select>?</h1><button type="submit">Submit</button></form>
+                    <form action="">
+                        <h1>What's the weather like in 
+                        <label for="city" class="srOnly">your current city</label> 
+                        <input type="text" name="city" id="city" class="name" placeholder="city" required></input>, 
+                        <select class="form-control" value="NA" data-role="country-selector">
+                        <option class="countries" value="NA"> country </option>
+                        <option class="countries" value="AF"> Afghanistan </option>
+                        <option class="countries" value="AX"> Åland Islands </option>
+                        <option class="countries" value="AL"> Albania </option>
+                        <option class="countries" value="DZ"> Algeria </option>
+                        <option class="countries" value="AS"> American Samoa </option>
+                        <option class="countries" value="AD"> Andorra </option>
+                        <option class="countries" value="AO"> Angola </option>
+                        <option class="countries" value="AI"> Anguilla </option>
+                        <option class="countries" value="AQ"> Antarctica </option>
+                        <option class="countries" value="AG"> Antigua and Barbuda </option>
+                        <option class="countries" value="AR"> Argentina </option>
+                        <option class="countries" value="AM"> Armenia </option>
+                        <option class="countries" value="AW"> Aruba </option>
+                        <option class="countries" value="AU"> Australia </option>
+                        <option class="countries" value="AT"> Austria </option>
+                        <option class="countries" value="AZ"> Azerbaijan </option>
+                        <option class="countries" value="BS"> Bahamas </option>
+                        <option class="countries" value="BH"> Bahrain </option>
+                        <option class="countries" value="BD"> Bangladesh </option>
+                        <option class="countries" value="BB"> Barbados </option>
+                        <option class="countries" value="BY"> Belarus </option>
+                        <option class="countries" value="BE"> Belgium </option>
+                        <option class="countries" value="BZ"> Belize </option>
+                        <option class="countries" value="BJ"> Benin </option>
+                        <option class="countries" value="BM"> Bermuda </option>
+                        <option class="countries" value="BT"> Bhutan </option>
+                        <option class="countries" value="BO"> Bolivia (Plurinational State of) </option>
+                        <option class="countries" value="BQ"> Bonaire, Sint Eustatius and Saba </option>
+                        <option class="countries" value="BA"> Bosnia and Herzegovina </option>
+                        <option class="countries" value="BW"> Botswana </option>
+                        <option class="countries" value="BV"> Bouvet Island </option>
+                        <option class="countries" value="BR"> Brazil </option>
+                        <option class="countries" value="IO"> British Indian Ocean Territory </option>
+                        <option class="countries" value="BN"> Brunei Darussalam </option>
+                        <option class="countries" value="BG"> Bulgaria </option>
+                        <option class="countries" value="BF"> Burkina Faso </option>
+                        <option class="countries" value="BI"> Burundi </option>
+                        <option class="countries" value="KH"> Cambodia </option>
+                        <option class="countries" value="CM"> Cameroon </option>
+                        <option class="countries" value="CA"> Canada </option>
+                        <option class="countries" value="CV"> Cabo Verde </option>
+                        <option class="countries" value="KY"> Cayman Islands </option>
+                        <option class="countries" value="CF"> Central African Republic </option>
+                        <option class="countries" value="TD"> Chad </option>
+                        <option class="countries" value="CL"> Chile </option>
+                        <option class="countries" value="CN"> China </option>
+                        <option class="countries" value="CX"> Christmas Island </option>
+                        <option class="countries" value="CC"> Cocos (Keeling) Islands </option>
+                        <option class="countries" value="CO"> Colombia </option>
+                        <option class="countries" value="KM"> Comoros </option>
+                        <option class="countries" value="CG"> Congo </option>
+                        <option class="countries" value="CD"> Congo (Democratic Republic of the) </option>
+                        <option class="countries" value="CK"> Cook Islands </option>
+                        <option class="countries" value="CR"> Costa Rica </option>
+                        <option class="countries" value="CI"> Côte d'Ivoire </option>
+                        <option class="countries" value="HR"> Croatia </option>
+                        <option class="countries" value="CU"> Cuba </option>
+                        <option class="countries" value="CW"> Curaçao </option>
+                        <option class="countries" value="CY"> Cyprus </option>
+                        <option class="countries" value="CZ"> Czech Republic </option>
+                        <option class="countries" value="DK"> Denmark </option>
+                        <option class="countries" value="DJ"> Djibouti </option>
+                        <option class="countries" value="DM"> Dominica </option>
+                        <option class="countries" value="DO"> Dominican Republic </option>
+                        <option class="countries" value="EC"> Ecuador </option>
+                        <option class="countries" value="EG"> Egypt </option>
+                        <option class="countries" value="SV"> El Salvador </option>
+                        <option class="countries" value="GQ"> Equatorial Guinea </option>
+                        <option class="countries" value="ER"> Eritrea </option>
+                        <option class="countries" value="EE"> Estonia </option>
+                        <option class="countries" value="ET"> Ethiopia </option>
+                        <option class="countries" value="FK"> Falkland Islands (Malvinas) </option>
+                        <option class="countries" value="FO"> Faroe Islands </option>
+                        <option class="countries" value="FJ"> Fiji </option>
+                        <option class="countries" value="FI"> Finland </option>
+                        <option class="countries" value="FR"> France </option>
+                        <option class="countries" value="GF"> French Guiana </option>
+                        <option class="countries" value="PF"> French Polynesia </option>
+                        <option class="countries" value="TF"> French Southern Territories </option>
+                        <option class="countries" value="GA"> Gabon </option>
+                        <option class="countries" value="GM"> Gambia </option>
+                        <option class="countries" value="GE"> Georgia </option>
+                        <option class="countries" value="DE"> Germany </option>
+                        <option class="countries" value="GH"> Ghana </option>
+                        <option class="countries" value="GI"> Gibraltar </option>
+                        <option class="countries" value="GR"> Greece </option>
+                        <option class="countries" value="GL"> Greenland </option>
+                        <option class="countries" value="GD"> Grenada </option>
+                        <option class="countries" value="GP"> Guadeloupe </option>
+                        <option class="countries" value="GU"> Guam </option>
+                        <option class="countries" value="GT"> Guatemala </option>
+                        <option class="countries" value="GG"> Guernsey </option>
+                        <option class="countries" value="GN"> Guinea </option>
+                        <option class="countries" value="GW"> Guinea-Bissau </option>
+                        <option class="countries" value="GY"> Guyana </option>
+                        <option class="countries" value="HT"> Haiti </option>
+                        <option class="countries" value="HM"> Heard Island and McDonald Islands </option>
+                        <option class="countries" value="VA"> Holy See </option>
+                        <option class="countries" value="HN"> Honduras </option>
+                        <option class="countries" value="HK"> Hong Kong </option>
+                        <option class="countries" value="HU"> Hungary </option>
+                        <option class="countries" value="IS"> Iceland </option>
+                        <option class="countries" value="IN"> India </option>
+                        <option class="countries" value="ID"> Indonesia </option>
+                        <option class="countries" value="IR"> Iran (Islamic Republic of) </option>
+                        <option class="countries" value="IQ"> Iraq </option>
+                        <option class="countries" value="IE"> Ireland </option>
+                        <option class="countries" value="IM"> Isle of Man </option>
+                        <option class="countries" value="IL"> Israel </option>
+                        <option class="countries" value="IT"> Italy </option>
+                        <option class="countries" value="JM"> Jamaica </option>
+                        <option class="countries" value="JP"> Japan </option>
+                        <option class="countries" value="JE"> Jersey </option>
+                        <option class="countries" value="JO"> Jordan </option>
+                        <option class="countries" value="KZ"> Kazakhstan </option>
+                        <option class="countries" value="KE"> Kenya </option>
+                        <option class="countries" value="KI"> Kiribati </option>
+                        <option class="countries" value="KP"> Korea (Democratic People's Republic of) </option>
+                        <option class="countries" value="KR"> Korea (Republic of) </option>
+                        <option class="countries" value="KW"> Kuwait </option>
+                        <option class="countries" value="KG"> Kyrgyzstan </option>
+                        <option class="countries" value="LA"> Lao People's Democratic Republic </option>
+                        <option class="countries" value="LV"> Latvia </option>
+                        <option class="countries" value="LB"> Lebanon </option>
+                        <option class="countries" value="LS"> Lesotho </option>
+                        <option class="countries" value="LR"> Liberia </option>
+                        <option class="countries" value="LY"> Libya </option>
+                        <option class="countries" value="LI"> Liechtenstein </option>
+                        <option class="countries" value="LT"> Lithuania </option>
+                        <option class="countries" value="LU"> Luxembourg </option>
+                        <option class="countries" value="MO"> Macao </option>
+                        <option class="countries" value="MK"> Macedonia (the former Yugoslav Republic of) </option>
+                        <option class="countries" value="MG"> Madagascar </option>
+                        <option class="countries" value="MW"> Malawi </option>
+                        <option class="countries" value="MY"> Malaysia </option>
+                        <option class="countries" value="MV"> Maldives </option>
+                        <option class="countries" value="ML"> Mali </option>
+                        <option class="countries" value="MT"> Malta </option>
+                        <option class="countries" value="MH"> Marshall Islands </option>
+                        <option class="countries" value="MQ"> Martinique </option>
+                        <option class="countries" value="MR"> Mauritania </option>
+                        <option class="countries" value="MU"> Mauritius </option>
+                        <option class="countries" value="YT"> Mayotte </option>
+                        <option class="countries" value="MX"> Mexico </option>
+                        <option class="countries" value="FM"> Micronesia (Federated States of) </option>
+                        <option class="countries" value="MD"> Moldova (Republic of) </option>
+                        <option class="countries" value="MC"> Monaco </option>
+                        <option class="countries" value="MN"> Mongolia </option>
+                        <option class="countries" value="ME"> Montenegro </option>
+                        <option class="countries" value="MS"> Montserrat </option>
+                        <option class="countries" value="MA"> Morocco </option>
+                        <option class="countries" value="MZ"> Mozambique </option>
+                        <option class="countries" value="MM"> Myanmar </option>
+                        <option class="countries" value="NA"> Namibia </option>
+                        <option class="countries" value="NR"> Nauru </option>
+                        <option class="countries" value="NP"> Nepal </option>
+                        <option class="countries" value="NL"> Netherlands </option>
+                        <option class="countries" value="NC"> New Caledonia </option>
+                        <option class="countries" value="NZ"> New Zealand </option>
+                        <option class="countries" value="NI"> Nicaragua </option>
+                        <option class="countries" value="NE"> Niger </option>
+                        <option class="countries" value="NG"> Nigeria </option>
+                        <option class="countries" value="NU"> Niue </option>
+                        <option class="countries" value="NF"> Norfolk Island </option>
+                        <option class="countries" value="MP"> Northern Mariana Islands </option>
+                        <option class="countries" value="NO"> Norway </option>
+                        <option class="countries" value="OM"> Oman </option>
+                        <option class="countries" value="PK"> Pakistan </option>
+                        <option class="countries" value="PW"> Palau </option>
+                        <option class="countries" value="PS"> Palestine, State of </option>
+                        <option class="countries" value="PA"> Panama </option>
+                        <option class="countries" value="PG"> Papua New Guinea </option>
+                        <option class="countries" value="PY"> Paraguay </option>
+                        <option class="countries" value="PE"> Peru </option>
+                        <option class="countries" value="PH"> Philippines </option>
+                        <option class="countries" value="PN"> Pitcairn </option>
+                        <option class="countries" value="PL"> Poland </option>
+                        <option class="countries" value="PT"> Portugal </option>
+                        <option class="countries" value="PR"> Puerto Rico </option>
+                        <option class="countries" value="QA"> Qatar </option>
+                        <option class="countries" value="RE"> Réunion </option>
+                        <option class="countries" value="RO"> Romania </option>
+                        <option class="countries" value="RU"> Russian Federation </option>
+                        <option class="countries" value="RW"> Rwanda </option>
+                        <option class="countries" value="BL"> Saint Barthélemy </option>
+                        <option class="countries" value="SH"> Saint Helena, Ascension and Tristan da Cunha </option>
+                        <option class="countries" value="KN"> Saint Kitts and Nevis </option>
+                        <option class="countries" value="LC"> Saint Lucia </option>
+                        <option class="countries" value="MF"> Saint Martin (French part) </option>
+                        <option class="countries" value="PM"> Saint Pierre and Miquelon </option>
+                        <option class="countries" value="VC"> Saint Vincent and the Grenadines </option>
+                        <option class="countries" value="WS"> Samoa </option>
+                        <option class="countries" value="SM"> San Marino </option>
+                        <option class="countries" value="ST"> Sao Tome and Principe </option>
+                        <option class="countries" value="SA"> Saudi Arabia </option>
+                        <option class="countries" value="SN"> Senegal </option>
+                        <option class="countries" value="RS"> Serbia </option>
+                        <option class="countries" value="SC"> Seychelles </option>
+                        <option class="countries" value="SL"> Sierra Leone </option>
+                        <option class="countries" value="SG"> Singapore </option>
+                        <option class="countries" value="SX"> Sint Maarten (Dutch part) </option>
+                        <option class="countries" value="SK"> Slovakia </option>
+                        <option class="countries" value="SI"> Slovenia </option>
+                        <option class="countries" value="SB"> Solomon Islands </option>
+                        <option class="countries" value="SO"> Somalia </option>
+                        <option class="countries" value="ZA"> South Africa </option>
+                        <option class="countries" value="GS"> South Georgia and the South Sandwich Islands </option>
+                        <option class="countries" value="SS"> South Sudan </option>
+                        <option class="countries" value="ES"> Spain </option>
+                        <option class="countries" value="LK"> Sri Lanka </option>
+                        <option class="countries" value="SD"> Sudan </option>
+                        <option class="countries" value="SR"> Suriname </option>
+                        <option class="countries" value="SJ"> Svalbard and Jan Mayen </option>
+                        <option class="countries" value="SZ"> Swaziland </option>
+                        <option class="countries" value="SE"> Sweden </option>
+                        <option class="countries" value="CH"> Switzerland </option>
+                        <option class="countries" value="SY"> Syrian Arab Republic </option>
+                        <option class="countries" value="TW"> Taiwan, Province of China </option>
+                        <option class="countries" value="TJ"> Tajikistan </option>
+                        <option class="countries" value="TZ"> Tanzania, United Republic of </option>
+                        <option class="countries" value="TH"> Thailand </option>
+                        <option class="countries" value="TL"> Timor-Leste </option>
+                        <option class="countries" value="TG"> Togo </option>
+                        <option class="countries" value="TK"> Tokelau </option>
+                        <option class="countries" value="TO"> Tonga </option>
+                        <option class="countries" value="TT"> Trinidad and Tobago </option>
+                        <option class="countries" value="TN"> Tunisia </option>
+                        <option class="countries" value="TR"> Turkey </option>
+                        <option class="countries" value="TM"> Turkmenistan </option>
+                        <option class="countries" value="TC"> Turks and Caicos Islands </option>
+                        <option class="countries" value="TV"> Tuvalu </option>
+                        <option class="countries" value="UG"> Uganda </option>
+                        <option class="countries" value="UA"> Ukraine </option>
+                        <option class="countries" value="AE"> United Arab Emirates </option>
+                        <option class="countries" value="GB"> United Kingdom of Great Britain and Northern Ireland </option>
+                        <option class="countries" value="US"> United States of America </option>
+                        <option class="countries" value="UM"> United States Minor Outlying Islands </option>
+                        <option class="countries" value="UY"> Uruguay </option>
+                        <option class="countries" value="UZ"> Uzbekistan </option>
+                        <option class="countries" value="VU"> Vanuatu </option>
+                        <option class="countries" value="VE"> Venezuela (Bolivarian Republic of) </option>
+                        <option class="countries" value="VN"> Viet Nam </option>
+                        <option class="countries" value="VG"> Virgin Islands (British) </option>
+                        <option class="countries" value="VI"> Virgin Islands (U.S.) </option>
+                        <option class="countries" value="WF"> Wallis and Futuna </option>
+                        <option class="countries" value="EH"> Western Sahara </option>
+                        <option class="countries" value="YE"> Yemen </option>
+                        <option class="countries" value="ZW"> Zimbabwe </option>
+                        <option class="countries" value="ZM"> Zambia </option>
+                    </select>?</h1>
+                    <button type="submit">Submit</button></form>
+                </div>
+                <div class="weatherResults">
+                    <!-- Dynamic Weather Results Displayed here -->
+                    <img src="./assets/noun_sun_653889.svg" alt="Sun icon">
+                    <h2>Toronto, Canada</h2>
+                    <p>Weather decription</p>
+                    <p>Current temp</p>
+                    <p>Min temp | max temp</p>
                 </div>
             </div>
         </div>
@@ -28,7 +292,6 @@
     <!-- jQuery -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <!-- Internal Script -->
-    <script src="./scripts/plugin.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
 </html>

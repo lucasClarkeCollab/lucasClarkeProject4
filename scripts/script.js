@@ -9,31 +9,37 @@ const weatherApp = {};
 
 weatherApp.init = () => {
     weatherApp.eventListener();
+    $('.weatherResults').hide();
 }
 
 let countryCode = "";
 let city = "";
 
 
-// weatherApp.getWeather = () => {
-//     $.ajax({
-//         url: 'http://api.openweathermap.org/data/2.5/weather?',
-//         method: 'GET',
-//         dataType: 'json',
-//         data: {
-//             q: `${city},${countryCode}`
-//             APPID: '92d78e5b6220af8048ce06de33b61699',
-//             units: 'Metric'
-//         }
-//     }).then(function(results){
-//         console.log(results)
-//     })
-// }
+weatherApp.getWeather = () => {
+    $.ajax({
+        url: 'http://api.openweathermap.org/data/2.5/weather?',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            q: `${city},${countryCode}`,
+            APPID: '92d78e5b6220af8048ce06de33b61699',
+            units: 'Metric'
+        }
+    }).then(function(results){
+        console.log(results);
+        $('.whatCity').hide();
+        $('.weatherResults').show();
+    })
+}
 
 weatherApp.eventListener = () => {
-    $('.countries').on('click', function(){
+    $('option').on('click', function(){
         countryCode = $(this).attr('value');
+        console.log(countryCode);
     })
+    }
+    
     $('form').on('submit', function(e){
         e.preventDefault();
         city = $('input').val();
@@ -41,12 +47,15 @@ weatherApp.eventListener = () => {
             alert('Please select a valid country')
         }
         else {
+            weatherApp.getWeather();
             console.log(countryCode);
             return countryCode
+
         }
     })
-}
+
 
 $(function () {
     weatherApp.init();
+    
 });
