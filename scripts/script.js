@@ -39,30 +39,35 @@ weatherApp.getWeather = () => {
         <p><span class="tempTitle">Currently</span> ${currentTemp}°C</p>
         <p><span class="tempTitle">Min.</span> ${minTemp}°C | <span class="tempTitle">Max.</span> ${maxTemp}°C</p>
         `)
-        let unix_timestamp = results.dt
-        // Create a new JavaScript Date object based on the timestamp
-        // multiplied by 1000 so that the argument is in milliseconds, not seconds.
-        let date = new Date(unix_timestamp * 1000);
-        // Hours part from the timestamp
-        let hours = date.getHours();
-        // Minutes part from the timestamp
-        let minutes = "0" + date.getMinutes();
-        // Seconds part from the timestamp
-        let seconds = "0" + date.getSeconds();
-
-        // Will display time in 10:30:23 format
-        const formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-
         console.log(results);
-        if (results.weather[0].id >= 801 && results.weather[0].id <= 803){
+        console.log(results.sys.sunset, results.dt);
+        //Cloudy Weather Results
+        if (results.weather[0].id >= 801 && results.weather[0].id <= 803 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset){
             $('section').removeClass('default');
             $('section').addClass('cloudy');
-            console.log("Now it's Cloudy!")
+        } else if (results.weather[0].id >= 801 && results.weather[0].id <= 803 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
+            $('section').removeClass('default');
+            $('section').addClass('nightCloudy');
         } else if (results.weather[0].id === 804) {
             $('section').removeClass('default');
             $('section').addClass('overcast');
         }
-
+        //Stormy Weather Results
+        if (results.weather[0].id >= 200 && results.weather[0].id <= 232 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
+            $('section').removeClass('default');
+            $('section').addClass('storm');
+        } else if (results.weather[0].id >= 200 && results.weather[0].id <= 232 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
+            $('section').removeClass('default');
+            $('section').addClass('nightStorm');
+        }
+        //Drizzly, Rainy, Snowy and Atmospheric Weather Results
+        if (results.weather[0].id >= 300 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
+            $('section').removeClass('default');
+            $('section').addClass('overcast');
+        } else if (results.weather[0].id >= 300 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
+            $('section').removeClass('default');
+            $('section').addClass('nightOvercast');
+        }
     })
 }
 
