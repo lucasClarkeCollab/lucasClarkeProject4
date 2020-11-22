@@ -379,7 +379,7 @@ section {
 }
 
 .sunny {
-  background-image: url("../assets/Sunny.png");
+  background-color: #00ccff;
 }
 
 .nightCloudy {
@@ -395,6 +395,10 @@ section {
 .nightOvercast {
   background-image: url(../assets/nightOvercast.png);
   color: white;
+}
+
+.nightClear {
+  background-color: #002b3d;
 }
 
 .weatherResults {
@@ -425,4 +429,14 @@ section {
 
 .weatherResults img {
   width: 20%;
+}
+
+.iconContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
