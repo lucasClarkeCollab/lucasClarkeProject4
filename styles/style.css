@@ -328,10 +328,41 @@ select {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 15px 40px;
   font-size: 2.7rem;
   font-family: 'Roboto', sans-serif;
   text-shadow: 1px 1px 0px #FFF;
+  border-radius: 35px;
+  background-color: #FFF;
+  border: none;
+  margin-top: 50px;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+button::before {
+  content: " ";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #FFF;
+  border-radius: 50%;
+  top: -20px;
+  right: 10px;
+  z-index: -1;
+}
+
+button::after {
+  content: " ";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #FFF;
+  border-radius: 50%;
+  top: -15px;
+  left: 45px;
+  z-index: -1;
 }
 
 .whatCity h1 {
@@ -360,6 +391,25 @@ section {
           align-items: center;
   background-position: center;
   background-size: cover;
+  z-index: 0;
+}
+
+section .whatCity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .whatCity img {
+  width: 20%;
+  margin-top: -20%;
 }
 
 .default {
@@ -441,7 +491,7 @@ section {
   text-shadow: 2px 2px 0px black;
 }
 
-.weatherResults img {
+.iconContainer img {
   width: 20%;
 }
 
@@ -453,4 +503,21 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.refreshIcon {
+  width: 100%;
+}
+
+.refreshIcon a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.refreshIcon img {
+  width: 10%;
 }
