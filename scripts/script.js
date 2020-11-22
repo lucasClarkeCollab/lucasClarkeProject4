@@ -39,6 +39,7 @@ weatherApp.getWeather = () => {
         <p>${results.weather[0].description}</p>
         <p><span class="tempTitle">Currently</span> ${currentTemp}°C</p>
         <p><span class="tempTitle">Min.</span> ${minTemp}°C | <span class="tempTitle">Max.</span> ${maxTemp}°C</p>
+        <div class="refreshIcon"></div>
         `)
         console.log(results);
         console.log(results.sys.sunset, results.dt);
@@ -48,6 +49,7 @@ weatherApp.getWeather = () => {
             $('section').removeClass('default');
             $('section').addClass('cloudy');
             $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}"/>`);
+            $('.refreshIcon').append(`<a href="/"><img src="./assets/refresh.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id >= 801 && results.weather[0].id <= 803 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
             $('h2').addClass('night');
             $('section').removeClass('default');
@@ -82,31 +84,37 @@ weatherApp.getWeather = () => {
             $('section').removeClass('default');
             $('section').addClass('overcast');
             $('.iconContainer').append(`<img src="./assets/rain.svg" alt="${results.weather[0].description}">`);
+            $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id >= 300 && results.weather[0].id <= 531 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightOvercast');
             $('.iconContainer').append(`<img src="./assets/rain.svg" alt="${results.weather[0].description}">`);
+            $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id >= 600 && results.weather[0].id <= 622 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('overcast');
             $('.iconContainer').append(`<img src="./assets/snow.svg" alt="${results.weather[0].description}">`);
+            $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id >= 600 && results.weather[0].id <= 622 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightOvercast');
             $('.iconContainer').append(`<img src="./assets/snow.svg" alt="${results.weather[0].description}">`);
+            $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id >= 701 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('overcast');
             $('.iconContainer').append(`<img src="./assets/fogHaze.svg" alt="${results.weather[0].description}">`);
+            $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id >= 701 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightOvercast');
             $('.iconContainer').append(`<img src="./assets/fogHaze.svg" alt="${results.weather[0].description}">`)
+            $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         };
         // Clear and Sunny Weather Results
         if (results.weather[0].id === 800 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
@@ -144,4 +152,5 @@ weatherApp.eventListener = () => {
 
 $(function () {
     weatherApp.init();
+
 })

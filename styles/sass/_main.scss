@@ -8,6 +8,16 @@ section {
     align-items: center;
     background-position: center;
     background-size: cover;
+    z-index:0;
+    .whatCity {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        img{
+        width:20%;
+        margin-top: -20%;
+        }
+    }
 }
 
 .default {
@@ -62,11 +72,6 @@ background-image:url('../assets/PartiallyCloud.png');
 
 
 
-
-//Title and User Form Slide-out (Hamburger)
-
-// // Title and User Form will fade out to Current Weather Results
-
 //Current Weather Results
 .weatherResults {
     display: flex;
@@ -92,12 +97,25 @@ background-image:url('../assets/PartiallyCloud.png');
     text-shadow: 2px 2px 0px black;
 }
 
-.weatherResults img {
+.iconContainer img {
     width: 20%;
 }
 .iconContainer {
     width: 100%;
     display:flex;
     justify-content:center;
+}
+
+.refreshIcon {
+    width: 100%;
+    a { 
+        display:flex;
+        justify-content: center;
+    }
+}
+
+.refreshIcon img {
+    width: 10%;
+    
 }
 //Five-day Forecast Toggle
