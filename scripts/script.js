@@ -72,15 +72,10 @@ weatherApp.getWeather = () => {
 }
 
 weatherApp.eventListener = () => {
-    $('option').on('click', function(){
-        countryCode = $(this).attr('value');
-        console.log(countryCode);
-    })
-    }
-    
     $('form').on('submit', function(e){
         e.preventDefault();
         city = $('input').val();
+        countryCode = $('select').val();
         if (countryCode === '' || countryCode === 'NA') {
             alert('Please select a valid country')
         }
@@ -90,9 +85,9 @@ weatherApp.eventListener = () => {
             return countryCode
         }
     })
+}
 
 
 $(function () {
     weatherApp.init();
-    
-});
+})
