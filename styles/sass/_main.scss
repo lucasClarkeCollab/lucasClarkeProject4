@@ -29,7 +29,8 @@ background-image:url('../assets/PartiallyCloud.png');
 
 .sunny {
     // background-image: url('../assets/Sunny.png');
-    background-color: #00ccff;
+    background: rgb(195,241,246);
+    background: radial-gradient(circle, rgba(195,241,246,1) 19%, rgba(0,204,252,1) 91%);
 }
 
 .nightCloudy {
@@ -49,6 +50,14 @@ background-image:url('../assets/PartiallyCloud.png');
 
 .nightClear {
     background-color: #002b3d;
+    color: white;
+    background-image:
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 
@@ -73,6 +82,14 @@ background-image:url('../assets/PartiallyCloud.png');
         p {
             font-size: 2rem;
         }
+}
+
+.day {
+    text-shadow: 2px 2px 0px white;
+}
+
+.night {
+    text-shadow: 2px 2px 0px black;
 }
 
 .weatherResults img {
