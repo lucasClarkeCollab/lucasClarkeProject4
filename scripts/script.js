@@ -33,7 +33,7 @@ weatherApp.getWeather = () => {
         $('.whatCity').hide();
         $('.weatherResults').fadeIn("slow");
         $('.weatherResults').append(`
-        <img src="./assets/Clouds.svg" alt="${results.weather[0].description}">
+        <div class="iconContainer"></div>
         <h2>${results.name}, ${results.sys.country}</h2>
         <p>${results.weather[0].description}</p>
         <p><span class="tempTitle">Currently</span> ${currentTemp}°C</p>
@@ -45,29 +45,66 @@ weatherApp.getWeather = () => {
         if (results.weather[0].id >= 801 && results.weather[0].id <= 803 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset){
             $('section').removeClass('default');
             $('section').addClass('cloudy');
+            $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}"/>`);
         } else if (results.weather[0].id >= 801 && results.weather[0].id <= 803 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
             $('section').removeClass('default');
             $('section').addClass('nightCloudy');
+            $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}"/>`);
         } else if (results.weather[0].id === 804) {
             $('section').removeClass('default');
             $('section').addClass('overcast');
+            $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}"/>`);
         }
         //Stormy Weather Results
         if (results.weather[0].id >= 200 && results.weather[0].id <= 232 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
             $('section').removeClass('default');
             $('section').addClass('storm');
+            $('.iconContainer').append(`<img src="./assets/thunderStorm.svg" alt="${results.weather[0].description}">`);
         } else if (results.weather[0].id >= 200 && results.weather[0].id <= 232 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
             $('section').removeClass('default');
             $('section').addClass('nightStorm');
+            $('.iconContainer').append(`<img src="./assets/thunderStorm.svg" alt="${results.weather[0].description}">`);
         }
         //Drizzly, Rainy, Snowy and Atmospheric Weather Results
-        if (results.weather[0].id >= 300 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
+        if (results.weather[0].id >= 300 && results.weather[0].id <= 531 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
             $('section').removeClass('default');
             $('section').addClass('overcast');
-        } else if (results.weather[0].id >= 300 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
+            $('.iconContainer').append(`<img src="./assets/rain.svg" alt="${results.weather[0].description}">`);
+        } else if (results.weather[0].id >= 300 && results.weather[0].id <= 531 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
             $('section').removeClass('default');
             $('section').addClass('nightOvercast');
+            $('.iconContainer').append(`<img src="./assets/rain.svg" alt="${results.weather[0].description}">`);
+        } else if (results.weather[0].id >= 600 && results.weather[0].id <= 622 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset){
+            $('section').removeClass('default');
+            $('section').addClass('overcast');
+            $('.iconContainer').append(`<img src="./assets/snow.svg" alt="${results.weather[0].description}">`);
+        } else if (results.weather[0].id >= 600 && results.weather[0].id <= 622 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset){
+            $('section').removeClass('default');
+            $('section').addClass('nightOvercast');
+            $('.iconContainer').append(`<img src="./assets/snow.svg" alt="${results.weather[0].description}">`);
+        } else if (results.weather[0].id >= 701 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
+            $('section').removeClass('default');
+            $('section').addClass('overcast');
+            $('.iconContainer').append(`<img src="./assets/fogHaze.svg" alt="${results.weather[0].description}">`);
+        } else if (results.weather[0].id >= 701 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
+            $('section').removeClass('default');
+            $('section').addClass('nightOvercast');
+            $('.iconContainer').append(`<img src="./assets/fogHaze.svg" alt="${results.weather[0].description}">`)
+        };
+
+        // Clear and Sunny Weather Results
+        if (results.weather[0].id === 800 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) {
+            $('section').removeClass('default');
+            $('section').addClass('sunny');
+            $('.iconContainer').append(`<img src="./assets/sunny.svg" alt="${results.weather[0].description}">`)
+        } else if (results.weather[0].id === 800 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) {
+            $('section').removeClass('default');
+            $('section').addClass('nightClear');
+            $('.iconContainer').append(`<img src="./assets/nightClear.svg" alt="${results.weather[0].description}">`)
+
         }
+
+    
     })
 }
 
