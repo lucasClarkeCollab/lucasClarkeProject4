@@ -598,9 +598,9 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    bottom: 5px;
   }
   footer p {
     font-size: 1.3rem;
-    bottom: 5px;
   }
 }
