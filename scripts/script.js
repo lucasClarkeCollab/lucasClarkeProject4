@@ -23,6 +23,8 @@ weatherApp.getWeather = () => {
         let currentTemp = Math.ceil(results.main.temp);
         let minTemp = Math.ceil(results.main.temp_min);
         let maxTemp = Math.ceil(results.main.temp_max);
+        let dayTime = (results.weather[0].icon).endsWith("d");
+        console.log(dayTime);
         $('.whatCity').hide();
         $('.weatherResults').fadeIn("slow");
         $('.weatherResults').append(`
@@ -33,14 +35,15 @@ weatherApp.getWeather = () => {
         <p><span class="tempTitle">Min.</span> ${minTemp}°C | <span class="tempTitle">Max.</span> ${maxTemp}°C</p>
         <div class="refreshIcon"></div>
         `)
+        console.log(results)
         //Clear Weather Results
-        if ((results.weather[0].id === 800 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id === 800 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset)) {
+        if (results.weather[0].id === 800 && dayTime === true) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('sunny');
             $('.iconContainer').append(`<img src="./assets/sunny.svg" alt="${results.weather[0].description}">`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refresh.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id === 800 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) || (results.weather[0].id === 800 && results.dt < results.sys.sunrise && results.dt < results.sys.sunset)) {
+        } else if (results.weather[0].id === 800 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightClear');
@@ -48,25 +51,25 @@ weatherApp.getWeather = () => {
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         }
         //Cloudy Weather Results
-        if ((results.weather[0].id >= 801 && results.weather[0].id <= 803 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 801 && results.weather[0].id <= 803 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset)) {
+        if (results.weather[0].id >= 801 && results.weather[0].id <= 803 && dayTime === true) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('cloudy');
             $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}"/>`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refresh.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id >= 801 && results.weather[0].id <= 803 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 801 && results.weather[0].id <= 803 && results.dt < results.sys.sunrise && results.dt < results.sys.sunset)) {
+        } else if (results.weather[0].id >= 801 && results.weather[0].id <= 803 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightCloudy');
             $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}"/>`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id === 804 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id === 804 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset)) {
+        } else if (results.weather[0].id === 804 && dayTime === true) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('sunny');
             $('.iconContainer').append(`<img src="./assets/sunny.svg" alt="${results.weather[0].description}">`)
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refresh.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id === 804 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset) || (results.weather[0].id === 804 && results.dt < results.sys.sunrise && results.dt < results.sys.sunset)) {
+        } else if (results.weather[0].id === 804 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightClear');
@@ -74,13 +77,13 @@ weatherApp.getWeather = () => {
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         }
         //Stormy Weather Results
-        if ((results.weather[0].id >= 200 && results.weather[0].id <= 232 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 200 && results.weather[0].id <= 232 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset)) {
+        if (results.weather[0].id >= 200 && results.weather[0].id <= 232 && dayTime === true) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('storm');
             $('.iconContainer').append(`<img src="./assets/thunderStorm.svg" alt="${results.weather[0].description}">`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refresh.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id >= 200 && results.weather[0].id <= 232 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 200 && results.weather[0].id <= 232 && results.dt < results.sys.sunrise && results.dt < results.sys.sunset)) {
+        } else if (results.weather[0].id >= 200 && results.weather[0].id <= 232 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightStorm');
@@ -88,37 +91,37 @@ weatherApp.getWeather = () => {
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         }
         //Drizzly, Rainy, Snowy and Atmospheric Weather Results
-        if ((results.weather[0].id >= 300 && results.weather[0].id <= 532 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 300 && results.weather[0].id <= 531 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset)) {
+        if (results.weather[0].id >= 300 && results.weather[0].id <= 531 && dayTime === true) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('overcast');
             $('.iconContainer').append(`<img src="./assets/rain.svg" alt="${results.weather[0].description}">`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id >= 300 && results.weather[0].id <= 531 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 300 && results.weather[0].id <= 531 && results.dt < results.sys.sunrise && results.dt < results.sys.sunset)) {
+        } else if (results.weather[0].id >= 300 && results.weather[0].id <= 531 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightOvercast');
             $('.iconContainer').append(`<img src="./assets/rain.svg" alt="${results.weather[0].description}">`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id >= 600 && results.weather[0].id <= 622 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 600 && results.weather[0].id <= 622 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset)) {
+        } else if (results.weather[0].id >= 600 && results.weather[0].id <= 622 && dayTime === true) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('overcast');
             $('.iconContainer').append(`<img src="./assets/snow.svg" alt="${results.weather[0].description}">`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id >= 600 && results.weather[0].id <= 622 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 600 && results.weather[0].id <= 622 && results.dt < results.sys.sunrise && results.dt < results.sys.sunset)) {
+        } else if (results.weather[0].id >= 600 && results.weather[0].id <= 622 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightOvercast');
             $('.iconContainer').append(`<img src="./assets/snow.svg" alt="${results.weather[0].description}">`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id >= 701 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 701 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt > results.sys.sunset)) {
+        } else if (results.weather[0].id >= 701 && results.weather[0].id <= 781 && dayTime === true) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('overcast');
             $('.iconContainer').append(`<img src="./assets/fogHaze.svg" alt="${results.weather[0].description}">`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
-        } else if ((results.weather[0].id >= 700 && results.weather[0].id <= 781 && results.dt > results.sys.sunrise && results.dt < results.sys.sunset) || (results.weather[0].id >= 700 && results.weather[0].id <= 781 && results.dt < results.sys.sunrise && results.dt < results.sys.sunset)) {
+        } else if (results.weather[0].id >= 700 && results.weather[0].id <= 781 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightOvercast');
