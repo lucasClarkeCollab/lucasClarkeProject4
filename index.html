@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>What's the weather like?</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- External Fonts / Poppins and Roboto -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- List of Countries Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
-    
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">   
 </head>
 <body>
     <main>
         <section id="home" class="default">
             <div class="wrapper">
                 <div class="whatCity">
-                    <img src="./assets/hotAirBalloon.svg" alt="An icon of four hot air balloons and a small cloud">
+                    <img class="floating" src="./assets/hotAirBalloon.svg" alt="An icon of four hot air balloons and a small cloud">
                     <form action="">
                         <h1>What's the weather like in 
                         <label for="city" class="srOnly">your current city</label> 
@@ -280,12 +276,13 @@
                 </div>
                 <div class="weatherResults">
                     <!-- Dynamic Weather Results Displayed here -->
-                    <!-- <img src="./assets/clouds.svg" alt=""> -->
                 </div>
             </div>
         </div>
     </main>
-    
+    <footer class="whatCity">
+        <p>Made by Lucas and Clarke at <a href="http://junocollege.com" target="_blank">Juno College</a></p><p>Backgrounds by <a href="https://makebackground.io" target="_blank">Makebackground.io</a></p><p>Icons by <a href="https://erikflowers.github.io/weather-icons/" target="_blank">Lukas Bischoff & Erik Flowers</a></p>
+    </footer>
     <!-- jQuery -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <!-- Internal Script -->
