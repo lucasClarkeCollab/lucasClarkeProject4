@@ -2,10 +2,10 @@
 @media (max-width: 600px) {
     footer {
         flex-direction: column;
+        bottom: 5px;
     }
     
     footer p {
         font-size: 1.3rem;
-        bottom: 5px;
     }
 }
