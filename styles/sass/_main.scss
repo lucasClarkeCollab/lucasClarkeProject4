@@ -8,69 +8,39 @@ section {
     align-items: center;
     background-position: center;
     background-size: cover;
-    z-index:0;
     .whatCity {
         display: flex;
         flex-direction: column;
         align-items: center;    
-        img{
-        width:20%;
-        margin-top: -20%;
+        z-index:2;
+        img {
+            opacity: .5;
+            position: absolute;
+            width: 150px;
+            top: 45px;
+            right: 90px;
+            animation-name: floating; 
+            animation-duration: 3s; 
+            animation-iteration-count: infinite; 
+            animation-timing-function: ease-in-out; 
+            margin-left: 30px; 
+            margin-top: 5px; 
         }
     }
 }
 
-.default {
-background-image:url('../assets/PartiallyCloud.png');
-}
-
-.cloudy {
-    background-image:url('../assets/Cloudy.png');
-}
-
-.overcast {
-    background-image: url('../assets/Overcast.png');
-}
-
-.storm {
-    background-image: url('../assets/Storm.png');
-    color: white;
-}
-
-.sunny {
-    // background-image: url('../assets/Sunny.png');
-    background: rgb(195,241,246);
-    background: radial-gradient(circle, rgba(195,241,246,1) 19%, rgba(0,204,252,1) 91%);
-}
-
-.nightCloudy {
-    background-image: url('../assets/NightCloudy.png');
-    color: white;
-}
-
-.nightStorm {
-    background-image: url('../assets/NightStorm.png');
-    color: white;
-}
-
-.nightOvercast {
-    background-image: url(../assets/nightOvercast.png);
-    color: white;
-}
-
-.nightClear {
-    background-color: #002b3d;
-    color: white;
-    background-image:
-        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-}
-
-
+//Balloon Animation
+@keyframes floating { 
+    0% {
+        transform: translate(0,  0px);
+    } 
+    50%  {
+        transform: translate(0, 15px);
+    } 
+    100%   {
+        transform: translate(0, -0px);
+    }     
+} 
 
 //Current Weather Results
 .weatherResults {
@@ -99,6 +69,7 @@ background-image:url('../assets/PartiallyCloud.png');
 
 .iconContainer img {
     width: 20%;
+    min-width: 200px;
 }
 .iconContainer {
     width: 100%;
@@ -115,7 +86,81 @@ background-image:url('../assets/PartiallyCloud.png');
 }
 
 .refreshIcon img {
-    width: 10%;
-    
+    width: 10%; 
+    min-width: 90px;  
 }
-//Five-day Forecast Toggle
+
+//Variable Weather Result Backgrounds
+
+.default {
+    background-image:url('../assets/partiallyCloud.png');
+}
+
+.cloudy {
+    background-image:url('../assets/cloudy.png');
+}
+
+.overcast {
+    background-image: url('../assets/overcast.png');
+}
+
+.storm {
+    background-image: url('../assets/storm.png');
+    color: white;
+}
+
+.sunny {
+    background: rgb(195,241,246);
+    background: radial-gradient(circle, rgba(195,241,246,1) 19%, rgba(0,204,252,1) 91%);
+}
+
+.nightCloudy {
+    background-image: url('../assets/nightCloudy.png');
+    color: white;
+}
+
+.nightStorm {
+    background-image: url('../assets/nightStorm.png');
+    color: white;
+}
+
+.nightOvercast {
+    background-image: url('../assets/nightOvercast.png');
+    color: white;
+}
+
+.nightClear {
+    background-color: #002b3d;
+    color: white;
+    background-image:
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+//Footer Styles
+
+footer {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    color: #000;
+    opacity: .8;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer a {
+    color: #000;
+    text-decoration: underline;
+}
+
+footer p {
+    text-align: center;
+}

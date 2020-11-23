@@ -335,7 +335,7 @@ button {
   border-radius: 35px;
   background-color: #FFF;
   border: none;
-  margin-top: 50px;
+  margin-top: 25px;
   position: relative;
   z-index: 10;
   cursor: pointer;
@@ -370,6 +370,7 @@ button::after {
   font-size: 3rem;
   text-shadow: 1px 1px 0px #FFF;
   line-height: 2.2;
+  z-index: 100;
 }
 
 .tempTitle {
@@ -391,7 +392,6 @@ section {
           align-items: center;
   background-position: center;
   background-size: cover;
-  z-index: 0;
 }
 
 section .whatCity {
@@ -405,11 +405,55 @@ section .whatCity {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 
 section .whatCity img {
-  width: 20%;
-  margin-top: -20%;
+  opacity: .5;
+  position: absolute;
+  width: 150px;
+  top: 45px;
+  right: 90px;
+  -webkit-animation-name: floating;
+          animation-name: floating;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
 }
 
 .default {
@@ -493,6 +537,7 @@ section .whatCity img {
 
 .iconContainer img {
   width: 20%;
+  min-width: 200px;
 }
 
 .iconContainer {
@@ -520,4 +565,31 @@ section .whatCity img {
 
 .refreshIcon img {
   width: 10%;
+  min-width: 90px;
+}
+
+footer {
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  bottom: 10px;
+  left: 5%;
+  width: 90%;
+  text-align: center;
+  color: #000;
+  opacity: .8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer a {
+  color: #000;
+  text-decoration: underline;
+}
+
+footer p {
+  text-align: center;
 }
