@@ -90,19 +90,19 @@ section {
 //Variable Weather Result Backgrounds
 
 .default {
-    background-image:url('../assets/partiallyCloud.png');
+    background-image:url('../assets/partialCloud.png');
 }
 
 .cloudy {
-    background-image:url('../assets/cloudy.png');
+    background-image:url('../assets/clouds.png');
 }
 
 .overcast {
-    background-image: url('../assets/overcast.png');
+    background-image: url('../assets/overcastSky.png');
 }
 
 .storm {
-    background-image: url('../assets/storm.png');
+    background-image: url('../assets/storming.png');
     color: white;
 }
 
@@ -112,12 +112,12 @@ section {
 }
 
 .nightCloudy {
-    background-image: url('../assets/nightCloudy.png');
+    background-image: url('../assets/nightClouds.png');
     color: white;
 }
 
 .nightStorm {
-    background-image: url('../assets/nightStorm.png');
+    background-image: url('../assets/nightStorming.png');
     color: white;
 }
 

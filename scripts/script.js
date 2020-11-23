@@ -40,7 +40,7 @@ weatherApp.getWeather = () => {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('sunny');
-            $('.iconContainer').append(`<img src="./assets/sunny.svg" alt="${results.weather[0].description}">`);
+            $('.iconContainer').append(`<img src="./assets/sunnyDay.svg" alt="${results.weather[0].description}">`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refresh.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id === 800 && dayTime === false) {
             $('h2').addClass('night');
@@ -54,25 +54,25 @@ weatherApp.getWeather = () => {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('cloudy');
-            $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}"/>`);
+            $('.iconContainer').append(`<img src="./assets/cloudy.svg" alt="${results.weather[0].description}"/>`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refresh.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id >= 801 && results.weather[0].id <= 803 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightCloudy');
-            $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}"/>`);
+            $('.iconContainer').append(`<img src="./assets/cloudy.svg" alt="${results.weather[0].description}"/>`);
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id === 804 && dayTime === true) {
             $('h2').addClass('day');
             $('section').removeClass('default');
             $('section').addClass('overcast');
-            $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}">`)
+            $('.iconContainer').append(`<img src="./assets/cloudy.svg" alt="${results.weather[0].description}">`)
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refresh.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id === 804 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
             $('section').addClass('nightOvercast');
-            $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}">`)
+            $('.iconContainer').append(`<img src="./assets/cloudy.svg" alt="${results.weather[0].description}">`)
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         }
         //Stormy Weather Results
