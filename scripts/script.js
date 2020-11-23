@@ -10,7 +10,7 @@ weatherApp.init = () => {
 
 weatherApp.getWeather = () => {
     $.ajax({
-        url: 'http://api.openweathermap.org/data/2.5/weather?',
+        url: 'https://api.openweathermap.org/data/2.5/weather?',
         method: 'GET',
         dataType: 'json',
         data: {
