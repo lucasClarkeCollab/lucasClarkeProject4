@@ -1,3 +1,19 @@
+@media (max-width: 600px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer p:first-of-type {
+    padding-top: 20%;
+  }
+  section {
+    padding-bottom: 60%;
+    padding-top: 40%;
+  }
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -405,7 +421,6 @@ section .whatCity {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 2;
 }
 
 section .whatCity img {
@@ -422,8 +437,6 @@ section .whatCity img {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  margin-left: 30px;
-  margin-top: 5px;
 }
 
 @-webkit-keyframes floating {
@@ -592,4 +605,5 @@ footer a {
 
 footer p {
   text-align: center;
+  font-size: 1.8rem;
 }

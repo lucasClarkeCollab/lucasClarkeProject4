@@ -24,7 +24,6 @@ weatherApp.getWeather = () => {
         let minTemp = Math.ceil(results.main.temp_min);
         let maxTemp = Math.ceil(results.main.temp_max);
         let dayTime = (results.weather[0].icon).endsWith("d");
-        console.log(dayTime);
         $('.whatCity').hide();
         $('.weatherResults').fadeIn("slow");
         $('.weatherResults').append(`
@@ -35,7 +34,7 @@ weatherApp.getWeather = () => {
         <p><span class="tempTitle">Min.</span> ${minTemp}°C | <span class="tempTitle">Max.</span> ${maxTemp}°C</p>
         <div class="refreshIcon"></div>
         `)
-        console.log(results)
+        
         //Clear Weather Results
         if (results.weather[0].id === 800 && dayTime === true) {
             $('h2').addClass('day');
@@ -66,14 +65,14 @@ weatherApp.getWeather = () => {
         } else if (results.weather[0].id === 804 && dayTime === true) {
             $('h2').addClass('day');
             $('section').removeClass('default');
-            $('section').addClass('sunny');
-            $('.iconContainer').append(`<img src="./assets/sunny.svg" alt="${results.weather[0].description}">`)
+            $('section').addClass('overcast');
+            $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}">`)
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refresh.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         } else if (results.weather[0].id === 804 && dayTime === false) {
             $('h2').addClass('night');
             $('section').removeClass('default');
-            $('section').addClass('nightClear');
-            $('.iconContainer').append(`<img src="./assets/nightClearMoon.svg" alt="${results.weather[0].description}">`)
+            $('section').addClass('nightOvercast');
+            $('.iconContainer').append(`<img src="./assets/clouds.svg" alt="${results.weather[0].description}">`)
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         }
         //Stormy Weather Results
@@ -129,7 +128,7 @@ weatherApp.getWeather = () => {
             $('.refreshIcon').append(`<a href="#home" onclick="location.reload()"><img src="./assets/refreshWhite.svg" alt="a refresh icon, click here to go back to the home page!"></a>`)
         }
     }, function(){
-        alert(`Whoa! Are you sure that place exists?`)
+        alert(`We couldn't find that city! Please try again.`)
     })
 }
 
@@ -142,8 +141,7 @@ weatherApp.eventListener = () => {
             alert('Please select a valid country')
         }
         else {
-            weatherApp.getWeather();
-            console.log(countryCode);
+            weatherApp.getWeather();;
             return countryCode
         }
     })
