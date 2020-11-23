@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's the weather like?</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- External Fonts / Poppins and Roboto -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">   
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <title>What's the weather?</title>
 </head>
 <body>
     <main>
@@ -18,7 +23,7 @@
                     <img class="floating" src="./assets/hotAirBalloon.svg" alt="An icon of four hot air balloons and a small cloud">
                     <form action="">
                         <h1>What's the weather like in 
-                        <label for="city" class="srOnly">your current city</label> 
+                        <label for="city" class="srOnly">enter a city</label> 
                         <input type="text" name="city" id="city" class="name" placeholder="city" required></input>, 
                         <select class="form-control" value="" data-role="country-selector">
                         <option class="countries" value=""> country </option>

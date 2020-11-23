@@ -1,0 +1,17 @@
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        p:first-of-type{
+            padding-top: 20%;
+        }
+    }
+    section {
+        padding-bottom:60%;
+        padding-top:40%
+    }
+    // .whatCity {
+    //     padding-top:15%;
+    // }
+
+}
